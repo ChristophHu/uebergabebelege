@@ -3,5 +3,100 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+    "uebergabebelege": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "sass"
+        }
+      },
+      "root": "projects/uebergabebelege",
+      "sourceRoot": "projects/uebergabebelege/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:application",
+          "options": {
+            "outputPath": "dist/uebergabebelege",
+            "index": "projects/uebergabebelege/src/index.html",
+            "browser": "projects/uebergabebelege/src/main.ts",
+            "polyfills": [
+              "zone.js"
+            ],
+            "tsConfig": "projects/uebergabebelege/tsconfig.app.json",
+            "inlineStyleLanguage": "sass",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/uebergabebelege/public"
+              }
+            ],
+            "styles": [
+              "projects/uebergabebelege/src/styles.sass"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
+                }
+              ],
+              "outputHashing": "all"
+            },
+            "development": {
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "configurations": {
+            "production": {
+              "buildTarget": "uebergabebelege:build:production"
+            },
+            "development": {
+              "buildTarget": "uebergabebelege:build:development"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ],
+            "tsConfig": "projects/uebergabebelege/tsconfig.spec.json",
+            "inlineStyleLanguage": "sass",
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "projects/uebergabebelege/public"
+              }
+            ],
+            "styles": [
+              "projects/uebergabebelege/src/styles.sass"
+            ],
+            "scripts": []
+          }
+        }
+      }
+    }
   }
 }
