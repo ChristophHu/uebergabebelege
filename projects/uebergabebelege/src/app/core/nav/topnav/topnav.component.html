@@ -1,0 +1,29 @@
+<div class="absolute h-16 w-full p-5 flex justify-between items-center bg-primary text-darker bg-opacity-75 shadow-lg z-90">
+    <div class="flex justify-center items-center w-full" id="vater">
+        <!-- Offline Notification -->
+        <!-- <div *ngIf="isOffline" role="alert" class="flex items-center p-2 mb-2 rounded-lg bg-red-200 border border-red-400 shadow-md mr-2">
+            <h2 class="text-base font-semibold text-red-800">Bordbuch ist offline</h2>
+        </div>
+        <div class="flex flex-col items-center ml-8" *ngIf="isLoggedIn"> 
+            <h2 class="text-base text-center">{{ (schiff$ | async)?.name }}</h2>
+            <div class="flex flex-wrap justify-center items-center gap-x-2">
+                <h5 class="text-xs text-center">{{ (streife$ | async)?.status }}</h5>
+                <div class="flex flex-wrap justify-center items-center gap-x-1">
+                    <h5 *ngIf="(streife$ | async)?.status != 'vorbereitend'" class="text-xs m-0 text-center">
+                        {{ (streife$ | async)?.start | date: 'dd.MM.yyyy HH:mm' }}
+                    </h5>
+                    <div *ngIf="(streife$ | async)?.ende" class="flex justify-center items-center gap-x-1">
+                        <span>-</span>
+                        <h5 class="text-xs m-0 text-center">
+                            {{ (streife$ | async)?.ende | date: 'dd.MM.yyyy HH:mm' }}
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <!-- <div class="flex justify-between items-center space-x-3">
+        <h2 *ngIf="isTest" class="bg-green-200 py-2 rounded-lg h-full flex items-center">T</h2>
+        <icons class="h-8" name="bordbuch-boot"></icons>
+    </div> -->
+</div>

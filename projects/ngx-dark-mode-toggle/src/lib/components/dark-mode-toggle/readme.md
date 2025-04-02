@@ -5,8 +5,7 @@
   <img alt="Static Badge" src="https://img.shields.io/badge/19.0.0-000000?style=for-the-badge&logo=angular&logoColor=white&label=Angular&labelColor=000000"><br>
   <img alt="Static Badge" src="https://img.shields.io/badge/HTML5-000000.svg?style=for-the-badge&logo=html5&logoColor=white&labelColor=E34F26&color=000000"><br>
   <img alt="Static Badge" src="https://img.shields.io/badge/SASS-000000.svg?style=for-the-badge&logo=sass&logoColor=white&labelColor=CC6699&color=000000"><br>
-  <img alt="Static Badge" src="https://img.shields.io/badge/tailwindcss-000000?style=for-the-badge&logo=tailwindcss&logoColor=white&labelColor=06B6D4&color=000000"><br>
-  <img alt="Static Badge" src="https://img.shields.io/badge/4.0.17-000000?style=for-the-badge&logo=tailwind&logoColor=white&label=Tailwind&labelColor=06B6D4&color=000000"><br>
+  <img alt="Static Badge" src="https://img.shields.io/badge/4.0.17-000000?style=for-the-badge&logo=tailwindcss&logoColor=white&label=Tailwind&labelColor=06B6D4&color=000000"><br>
   <img alt="Static Badge" src="https://img.shields.io/badge/5.6.2-000000?style=for-the-badge&logo=typescript&logoColor=white&label=Typescript&labelColor=007ACC&color=000000">
 </p>
 

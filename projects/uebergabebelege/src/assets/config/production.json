@@ -1,0 +1,66 @@
+{
+  "debugging"         : true,
+  "version"           : "1.0.21",
+  "version_datum"     : "01.06.2024",
+  "support"           : "Dir ZS IKT C 44 (Tel.: 770329)",
+  
+  "name"              : "production",
+  
+  "ldapConfig": {
+    "backendUrl"                  : "https://ldapinfo-lb.int.polizei.berlin.de/ldap_service",
+    "test_path"                   : "/ldap/authtest",
+    "user_path"                   : "/ldap/lookup",
+    "attributes"                  : [
+      "samaccountname", "displayName", "sn", "givenName", "department", "extensionAttribute2", "extensionattribute1", "extensionAttribute4", "jpegPhoto", "thumbnailPhoto", "office"
+    ],
+    "member_path"                 : "/ldap/memberof",
+    "groupdn": {
+      "role_admin"                  : "CN=PolWSP_Admin,OU=PolWSP,OU=Mobile_Verfahren,OU=_Sonderfunktionen,OU=Polizei,DC=int,DC=polizei,DC=berlin,DC=de",
+      "role_controlling"            : "CN=PolWSP_Controlling,OU=PolWSP,OU=Mobile_Verfahren,OU=_Sonderfunktionen,OU=Polizei,DC=int,DC=polizei,DC=berlin,DC=de",
+      "role_leitung"                : "CN=PolWSP_Leitung,OU=PolWSP,OU=Mobile_Verfahren,OU=_Sonderfunktionen,OU=Polizei,DC=int,DC=polizei,DC=berlin,DC=de",
+      "role_service"                : "CN=PolWSP_Service,OU=PolWSP,OU=Mobile_Verfahren,OU=_Sonderfunktionen,OU=Polizei,DC=int,DC=polizei,DC=berlin,DC=de",
+      "role_user"                   : "CN=PolWSP_User,OU=PolWSP,OU=Mobile_Verfahren,OU=_Sonderfunktionen,OU=Polizei,DC=int,DC=polizei,DC=berlin,DC=de"  
+    }
+  },
+  "adfsLoginConfig"   : {
+    "clientId"                    : "c1780010-70a7-44d0-b8db-87009266bf08",
+    "issuer"                      : "https://MAP-ADFS10-v.int.polizei.berlin.de/adfs",
+    "redirectUri"                 : "https://polosk-lb.int.polizei.berlin.de/polwspweb/",
+
+    "responseType"                : "code",
+    "scope"                       : "openid profile email offline_access api",
+    "showDebugInformation"        : true,
+    "timeoutFactor"               : 0.01,
+    "checkOrigin"                 : false,
+    "oidc"                        : true,
+    "sessionChecksEnabled"        : true,
+    "requireHttps"                : true,
+    "silentRefreshRedirectUri"    : "/assets/silent-refresh.html",
+    "silentRefreshTimeout"        : 30000,
+    "useSilentRefresh"            : false,
+    "clockSkewInSec"              : 60,
+    "clearHashAfterLogin"         : false,
+    "redirectUriAsPostLogoutRedirectUriFallback":false,
+    "postLogoutRedirectUri"       : "https://polosk-lb.int.polizei.berlin.de/polwspweb/",
+    "customQueryParams": {
+        "prompt": "login"
+    }
+  },
+  "polwsp_service": {
+    "backendUrl"                  : "https://wsp.int.polizei.berlin.de/polwsp_service"
+  },
+  "mailservice": {
+    "backendUrl"                  : "https://map-appiis-1-v.int.polizei.berlin.de/mail_service"
+  },
+  "notificationsConfig": {
+    "default": {
+      "type": "error",
+      "header": "Fehlerhafte Notification",
+      "message": "Es wurde keine Nachricht angegeben!",
+      "autoclose": true,
+      "max": 5,
+      "position": "top-right",
+      "timeout": 5000
+    }
+  }
+}
